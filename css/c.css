@@ -778,7 +778,7 @@ span.item {
 .intro{  
   opacity: 0;
   animation-name: fadeinup;    /*動畫名稱，需與 keyframe 名稱對應*/
-  animation-duration: 0.5s;    /*動畫持續時間，單位為秒*/     
+  animation-duration: 1.5s;    /*動畫持續時間，單位為秒*/     
   animation-fill-mode: forwards; /*停止在最後一幀*/
 }
 @keyframes fadeinup{
