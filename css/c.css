@@ -414,6 +414,7 @@ section#home{
   height: 100vh;
   min-height: 100vh;
   color: white;
+  background: -webkit-linear-gradient(top,rgba(255,255,255,1),rgba(40 59 76 / 47%)),url(../img/20200128_071616.jpg) center bottom no-repeat;
 }
 /*CSS純動畫*/
 /*
