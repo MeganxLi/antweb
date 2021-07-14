@@ -1,7 +1,4 @@
 
-  $(document).ready(function(){
-    
-});
 
 $(function () {
  
@@ -54,20 +51,40 @@ $(function () {
 
 $(document).ready(function(){
   $(window).scroll( function(){  
-      /* Check the location of each desired element */
+          
+           
       $('.hideme').each( function(i){          
+        
+        var scroll_of = $(window).scrollTop();
         var bottom_of_window = $(window).scrollTop() + $(window).height();
         var bottom_of_object = $(this).offset().top + $(this).outerHeight();
-      
+
+        var about = document.getElementById("about_section").offsetTop; 
+        var resume = document.getElementById("resume_section").offsetTop; 
         var experience = document.getElementById("experience_section").offsetTop; 
         var Portfolio = document.getElementById("portfolio_section").offsetTop;   
         
-        /* If the object is completely visible in the window, fade it it */        
-        if( experience  <bottom_of_window){
-          $('#experience_section').animate({'left':'0','opacity':'1'},700);          
+        
+        if(scroll_of<about-300){
+          $(".navbar-brand").text("李美儀Resume"); 
+        }else if(scroll_of<= resume-300){
+          $(".navbar-brand").text("About");
+        }else if(scroll_of<=experience-300){
+          $(".navbar-brand").text("Expertise");
+        }else if(scroll_of<=Portfolio-300){
+          $(".navbar-brand").text("Experience");
+        }else{
+          $(".navbar-brand").text("Portfolio");
         }
-        if( Portfolio  <bottom_of_window){
-          $('#portfolio_section').animate({'top':'0','opacity':'1'},700);                
+
+
+        /*動畫變化  Check the location of each desired element */ 
+        /* If the object is completely visible in the window, fade it it */          
+        if( experience+200  <bottom_of_window){
+          $('#experience_section').animate({'left':'0','opacity':'1'},700);           
+        }
+        if( Portfolio+200  <bottom_of_window){
+          $('#portfolio_section').animate({'top':'0','opacity':'1'},700);   
         }
           
       }); 
