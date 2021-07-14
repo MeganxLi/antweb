@@ -806,6 +806,13 @@ span.item {
   position: relative;
 }
 
+
+@media (min-width: 992px){
+  .navbar-brand{
+    display: none;
+  }
+}
+
 @media (max-width: 576px){
   .skill_name{
     padding-bottom: 20px;
